@@ -6,6 +6,7 @@ public class CalcArr extends Array implements EvalutionArr {
     public CalcArr() {
         this(0);
     }
+
     public CalcArr(int size) {
         super(size);
     }
@@ -39,10 +40,10 @@ public class CalcArr extends Array implements EvalutionArr {
         else {
             CalcArr result = new CalcArr(this.arr.length);
             for (int i = 0; i < this.arr.length; i++) {
-                if (this.arr[i] != 0 && secondArr.arr[i] > Integer.MAX_VALUE/ this.arr[i]) throw new RuntimeException(
+                if (this.arr[i] != 0 && secondArr.arr[i] > Integer.MAX_VALUE / this.arr[i]) throw new RuntimeException(
                         String.format("Результат перемножения элементов номер %d выходит за пределы Integer", i)
                 );
-                    else result.arr[i] = this.arr[i] * secondArr.arr[i];
+                else result.arr[i] = this.arr[i] * secondArr.arr[i];
             }
             return result;
         }
@@ -57,7 +58,7 @@ public class CalcArr extends Array implements EvalutionArr {
         else {
             CalcArr result = new CalcArr(this.arr.length);
             for (int i = 0; i < this.arr.length; i++) {
-                 result.arr[i] = this.arr[i] - secondArr.arr[i];
+                    result.arr[i] = this.arr[i] - secondArr.arr[i];
             }
             return result;
         }
@@ -72,10 +73,7 @@ public class CalcArr extends Array implements EvalutionArr {
         else {
             CalcArr result = new CalcArr(this.arr.length);
             for (int i = 0; i < this.arr.length; i++) {
-                if (this.arr[i] != 0 && secondArr.arr[i] > Integer.MAX_VALUE/ this.arr[i]) throw new RuntimeException(
-                        String.format("Результат сложения элементов номер %d выходит за пределы Integer", i)
-                );
-                else result.arr[i] = this.arr[i] + secondArr.arr[i];
+                    result.arr[i] = this.arr[i] + secondArr.arr[i];
             }
             return result;
         }

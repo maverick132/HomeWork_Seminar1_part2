@@ -1,5 +1,7 @@
 package Core.Interface;
 
+import Core.CalcArr;
+
 public interface Sum {
-    public void sum();
+    public CalcArr sum(CalcArr arr);
 }

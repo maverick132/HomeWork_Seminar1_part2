@@ -1,5 +1,7 @@
 package Core.Interface;
 
+import Core.CalcArr;
+
 public interface Div {
-    public int div(int firstIndex, int secondIndex);
+    public CalcArr div(CalcArr arr);
 }

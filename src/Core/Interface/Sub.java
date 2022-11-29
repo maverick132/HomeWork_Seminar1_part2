@@ -1,5 +1,7 @@
 package Core.Interface;
 
+import Core.CalcArr;
+
 public interface Sub {
-    public void sub();
+    public CalcArr sub(CalcArr arr);
 }

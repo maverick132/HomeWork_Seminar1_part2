@@ -1,5 +1,7 @@
 package Core.Interface;
 
+import Core.CalcArr;
+
 public interface Mult {
-    public void mult();
+    public CalcArr mult(CalcArr arr);
 }

@@ -5,23 +5,22 @@ import Core.CalcArr;
 
 public class Main {
     public static void main(String[] args) {
-        CalcArr arr = new CalcArr();
-        arr.createArr(new int[]{1,2,3,4,0});
-        arr.printArr();
+//        CalcArr arr = new CalcArr();
+//        arr.inputArr();
+        int[] ar1;
+        ar1 = new int[]{1,2,3};
+        printArr(ar1);
+
+        ar1 = new int[]{2,3,4,5};
+
+        printArr(ar1);
 
 
-        // Исключения из-за неверного индекса массива
-        arr.printElement(5);
-        arr.printElement(0);
+    }
 
-        // Исключение из-за деления на 0
-        System.out.println(arr.div(0,4));
-
-        // Исключения из-за некорректного ввода
-        CalcArr arrSecond = new CalcArr();
-        arrSecond.inputArr();
-
-
-
+    public static void printArr(int[] ar){
+        for (int i = 0; i < ar.length; i++) {
+            System.out.println(ar[i]);
+        }
     }
 }

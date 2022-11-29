@@ -11,6 +11,13 @@ import java.util.Scanner;
 public class Array implements InputArr, OutputArr {
     int[] arr;
 
+
+    public Array() {
+        this(0);
+    }
+    public Array(int size) {
+        this.arr = new int[size];
+    }
     private void createRandomArr(){
         for (int i = 0; i < this.arr.length; i++) {
             Random random = new Random();

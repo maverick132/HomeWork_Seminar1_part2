@@ -20,16 +20,16 @@ public class Array implements InputArr, OutputArr {
 
     private void enterArr(Scanner scanner){
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("Введите следующее число массива:");
+            System.out.println("Р’РІРµРґРёС‚Рµ СЃР»РµРґСѓСЋС‰РµРµ С‡РёСЃР»Рѕ РјР°СЃСЃРёРІР°:");
             if (scanner.hasNextInt()) this.arr[i] = scanner.nextInt();
-            else throw new InputMismatchException("Было введено не целое число");
+            else throw new InputMismatchException("Р‘С‹Р»Рѕ РІРІРµРґРµРЅРѕ РЅРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ");
         }
     }
 
 
     public void printElement(int index) {
-        if (index > this.arr.length - 1 || index <= 0) throw new ArrayIndexOutOfBoundsException("Индекс выходит за пределы массива");
-        else System.out.printf("Элемент номер %d в массиве равен %d \n", index, this.arr[index]);
+        if (index > this.arr.length - 1 || index <= 0) throw new ArrayIndexOutOfBoundsException("РРЅРґРµРєСЃ РІС‹С…РѕРґРёС‚ Р·Р° РїСЂРµРґРµР»С‹ РјР°СЃСЃРёРІР°");
+        else System.out.printf("Р­Р»РµРјРµРЅС‚ РЅРѕРјРµСЂ %d РІ РјР°СЃСЃРёРІРµ СЂР°РІРµРЅ %d \n", index, this.arr[index]);
     }
 
     public void createArr(int size) {
@@ -44,24 +44,24 @@ public class Array implements InputArr, OutputArr {
     }
     @Override
     public void inputArr() {
-        System.out.println("Введите размерность массива");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°СЃСЃРёРІР°");
         Scanner scanner = new Scanner(System.in);
 
         if (scanner.hasNextInt()) {
             int temp = scanner.nextInt();
             if (temp > 0) this.arr = new int[temp];
-            else throw new NegativeArraySizeException("Размерность массива должна быть положительной");
+            else throw new NegativeArraySizeException("Р Р°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°СЃСЃРёРІР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕР№");
         }
-        else  throw new InputMismatchException("Размерность массива должна быть целым числом");
+        else  throw new InputMismatchException("Р Р°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°СЃСЃРёРІР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С†РµР»С‹Рј С‡РёСЃР»РѕРј");
 
-        System.out.println("Сгенерировать массив автоматически? Д или Н?");
+        System.out.println("РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РјР°СЃСЃРёРІ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё? Р” РёР»Рё Рќ?");
 
-        if (!scanner.hasNext("Д") && !scanner.hasNext("Н")) throw new InputMismatchException("Введен не корректный ответ");
+        if (!scanner.hasNext("Р”") && !scanner.hasNext("Рќ")) throw new InputMismatchException("Р’РІРµРґРµРЅ РЅРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РѕС‚РІРµС‚");
         else {
-            if (scanner.next().equals("Д"))  createRandomArr();
+            if (scanner.next().equals("Р”"))  createRandomArr();
             else enterArr(scanner);
         }
-        System.out.println("Заданный массив:");
+        System.out.println("Р—Р°РґР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ:");
         this.printArr();
     }
 
